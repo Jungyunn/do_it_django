@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
+  - source: ./
     destination: /home/ubuntu/do_it_django
 file_exists_behavior: OVERWRITE
 
@@ -15,5 +15,5 @@ permissions:
 hooks:
   AfterInstall:
     - location: scripts/after_deploy.sh
-      timeout: 60000
+      timeout: 600
       runas: root
